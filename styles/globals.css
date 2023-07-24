@@ -3,12 +3,12 @@
 :root {
   --max-width: 1000px;
   --border-radius: 12px;
-  --background-start: rgb(255, 255, 255);
-  --background-end: rgb(253, 247, 236);
+  --background-start: rgb(255, 200, 149);
+  --background-end: rgb(39, 25, 10);
   --text-dark: rgb(34, 34, 34);
   --text-light: rgb(255, 248, 248);
   --dark: rgb(22, 22, 22);
-  --shadow: rgb(238, 238, 238);
+  --shadow: rgb(70, 70, 70);
   --orange: rgb(255, 165, 81);
   --pixel-font: 'VT323', monospace;
 }
@@ -24,6 +24,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,4 +40,34 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0%);
+}
+
+.fourth {
+  color: var(--text-light);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }
