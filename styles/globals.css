@@ -52,8 +52,8 @@ section {
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 3s;
+  transform: translateX(-10%);
+  transition: all 2s;
 }
 
 .show {

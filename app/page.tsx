@@ -22,7 +22,7 @@ export default function Home() {
           entry.target.classList.remove('show');
         }
       })
-    }, { rootMargin: "-300px" });
+    }, );
     hiddenElements.forEach((el: Element) => observer.observe(el));
   }, [isIntersecting])
 
@@ -31,13 +31,13 @@ export default function Home() {
       <section className='hidden first'>
         <MainPage />
       </section>
-      <section className='hidden second'>
-        <AboutUs />
-      </section>
-      <section className='hidden third'>
+      <section id='services' className='hidden third'>
         <Services />
       </section>
-      <section className='hidden fourth'>
+      <section id='about' className='hidden second'>
+        <AboutUs />
+      </section>
+      <section id='contact' className='hidden fourth'>
         <ContactUs />
       </section>
     </main>

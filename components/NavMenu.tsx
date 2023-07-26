@@ -10,13 +10,18 @@ export default function NavMenu() {
             </Link>
             <ul className={styles.links}>
                 <li>
-                    <Link href={'/prodcuts'}>
+                    <Link href={'/#services'}>
                         Services
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/about'}>
+                    <Link href={'/#about'}>
                         About
+                    </Link>
+                </li>
+                <li>
+                    <Link href={'/#contact'}>
+                        Contact
                     </Link>
                 </li>
             </ul>
