@@ -6,7 +6,7 @@ export default function ComingSoon() {
             <p className='something-wrong'>Work in progress</p>
             <p>Something great<br/>is coming soon,<br/>come back later.</p>
             <br/>
-            <p>In the mid time,<br /> check my portfolio.</p>
+            <p>In the meantime,<br /> check my portfolio.</p>
             <Link  className='btn' href={'https://www.jotadebeese.me/'}>HERE</Link>
         </div>
     )
