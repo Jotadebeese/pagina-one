@@ -1,9 +1,9 @@
 'use client'
 import styles from '/styles/page.module.css'
-import MainPage from '@/components/MainPage'
-import Services from '@/components/Services'
-import AboutUs from '@/components/AboutUs'
-import ContactUs from '@/components/ContactUs'
+import MainPage from '@/src/components/MainPage'
+import Services from '@/src/components/Services'
+import AboutUs from '@/src/components/AboutUs'
+import ContactUs from '@/src/components/ContactUs'
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {

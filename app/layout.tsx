@@ -1,4 +1,4 @@
-import NavMenu from '@/components/NavMenu'
+import NavMenu from '@/src/components/NavMenu'
 import '/styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
