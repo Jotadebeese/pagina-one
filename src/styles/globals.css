@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-  --max-width: 1000px;
+  /* Sizing */
+  --max-width: 1200px;
   --border-radius: 12px;
+
+  /* Colors */
   --background-start: rgb(255, 200, 149);
   --background-end: rgb(39, 25, 10);
   --text-dark: rgb(34, 34, 34);
