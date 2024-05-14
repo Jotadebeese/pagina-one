@@ -1,27 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "/styles/NavMenu.module.css";
+import styles from "@/src/styles/NavMenu.module.css";
+import squareLogo from "@/src/images/square_logo.svg";
 
 export default function NavMenu() {
     return (
         <div className={styles.nav}>
             <Link className={styles.logo} href={'/'}>
-                <Image src={'/logo.png'} alt="Company logo" width={50} height={50} />
+                <Image src={squareLogo} alt="Company logo" width={30} height={30} />
             </Link>
             <ul className={styles.links}>
                 <li>
                     <Link href={'/#services'}>
-                        Services
+                        SERVICES
                     </Link>
                 </li>
                 <li>
                     <Link href={'/#about'}>
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link href={'/#contact'}>
-                        Contact
+                        CONTACT
                     </Link>
                 </li>
             </ul>

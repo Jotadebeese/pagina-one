@@ -1,12 +1,16 @@
 .nav {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: var(--text-dark);
-    z-index: 10;
+    justify-content: center;
+    color: var(--dark-2);
+    z-index: 1;
+    gap: var(--spacing-xxl);
+    border: var(--border-xs) solid var(--light-2);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xxs) var(--spacing-sm) var(--spacing-xxs) var(--spacing-xs);
 }
 
 .logo {
@@ -15,35 +19,12 @@
     justify-content: center;
 }
 
-.logo img {
-    padding: auto;
-    border-radius: 50%;
-    margin: 5px 10px;
-    box-shadow: 
-        1px 1px 2px var(--shadow), 
-        -1px -1px 2px var(--shadow),
-        -1px 1px 2px var(--shadow),
-        1px -1px 2px var(--shadow)
-    ;
-    transition: ease 0.3s;
-    justify-self: center;
-    align-self: center;
-}
-
-.logo:hover, .links a:hover {
-    opacity: 0.9;
-    transition: ease 0.3s;
-}
-
 .links {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    min-width: 250px;
-    margin: 0;
-    margin-right: 10px;
-    padding: 0;
+    justify-content: center;
     list-style: none;
-    font-size: 0.8rem;
-    transition: ease 0.3s;
+    gap: var(--spacing-md);
+    font-size: var(--font-xs);
+    font-weight: var(--font-weight-semi-bold);
 }

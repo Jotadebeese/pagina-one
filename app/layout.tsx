@@ -1,10 +1,14 @@
 import NavMenu from '@/src/components/NavMenu'
-import '/styles/globals.css'
+import '@/src/styles/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
-const inter = Inter({ subsets: ['latin'] })
+const dm_sans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-sans',
+})
 
 export const metadata: Metadata = {
   title: 'PAGINA ONE',
@@ -17,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html 
+      lang="en"
+      className={dm_sans.variable}
+    >
+      <body>
         <NavMenu />
         {children}
         <Analytics />
