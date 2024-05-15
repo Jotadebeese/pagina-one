@@ -1,11 +1,11 @@
-import fullNameLogo from '@/src/images/full_name_logo.svg'
-import Image from 'next/image';
+import MainPageCard from '@/src/components/ui/MainPageCard';
+import styles from '@/src/styles/page.module.css';
 
 export default async function Home() {
 
   return (
-    <main>
-      <Image src={fullNameLogo} width={500} alt="Full Name Logo" />
+    <main className={styles.main}>
+      <MainPageCard />
     </main>
   );
 }
