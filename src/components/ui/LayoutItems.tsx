@@ -5,6 +5,18 @@ export function BackOne() {
         <div className={styles.backOne}></div>
     )
 }
+export function CircleOne() {
+    return (
+        <div className={styles.circleOne}></div>
+    )
+}
+export function CircleTwo() {
+    return (
+        <div className={styles.circleTwoOutside}>
+            <div className={styles.circleTwoInside}></div>
+        </div>
+    )
+}
 export function BackTwo() {
     return (
         <div className={styles.backTwo}></div>

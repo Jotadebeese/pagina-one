@@ -5,7 +5,39 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.circleOne {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    right: 35%;
+    border-radius: 50%;
+    border: var(--border-xs) dashed var(--light-2);
     z-index: -1;
+}
+.circleTwoOutside {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    top: 30%;
+    right: 30%;
+    margin-top: -25px;
+    margin-right: -25px;
+    border-radius: 50%;
+    border: var(--border-xl) solid var(--dark-2);
+    background: rgba(0, 0, 0, 0);
+}
+.circleTwoInside {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: var(--border-xl) solid var(--light);
+    background: var(--secondary);
 }
 .backTwo {
     position: absolute;
@@ -16,7 +48,7 @@
     border-left: var(--border-xs) dashed var(--light-2);
     border-bottom: var(--border-xs) dashed var(--light-2);
     background: var(--gradOne);
-    z-index: -1;
+    z-index: -2;
 }
 .backThree {
     position: absolute;
@@ -44,6 +76,23 @@
 }
 /* Mobile */
 @media (max-width: 768px) {
+    .circleOne {
+        width: 150px;
+        height: 150px;
+    }
+    .circleTwoOutside {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        margin-right: -15px;
+        right: 40%;
+        border: var(--border-md) solid var(--dark-2);
+    }
+    .circleTwoInside {
+        width: 20px;
+        height: 20px;
+        border: var(--border-xs) solid var(--light);
+    }
     .backTwo {
         width: 50%;
     }
