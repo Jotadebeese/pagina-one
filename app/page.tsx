@@ -6,7 +6,6 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <MainPageCard />
-      <div className={styles.backOne}></div>
     </main>
   );
 }

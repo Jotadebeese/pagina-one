@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: center;
     color: var(--dark-2);
+    background: var(--light);
+    opacity: 0.9;
     z-index: 1;
     gap: var(--spacing-xxl);
     border: var(--border-xs) solid var(--light-2);

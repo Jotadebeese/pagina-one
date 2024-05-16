@@ -5,13 +5,11 @@ import Link from "next/link";
 
 export default function MainPageCard() {
     return (
-        <div className={styles.mainContainer}>
-            <div className={styles.main}>
-                <Image src={logoName} alt="Company logo" width={500} />
-                <p>We build web and mobile apps from the ground.<br/>
-                We listen to your problem or idea and solve it with code.<br/><br/>
-                <Link href={'/contact'}>Hit us up</Link> to collaborate.</p>
-            </div>
+        <div className={styles.main}>
+            <Image src={logoName} alt="Company logo" width={500} />
+            <p>We build web and mobile apps from the ground.<br/>
+            We listen to your problem or idea and solve it with code.<br/><br/>
+            <Link href={'/contact'}>Hit us up</Link> to collaborate.</p>
         </div>
     )
 }
