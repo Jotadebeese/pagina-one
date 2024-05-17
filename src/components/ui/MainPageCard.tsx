@@ -7,8 +7,8 @@ export default function MainPageCard() {
     return (
         <div className={styles.main}>
             <Image src={logoName} alt="Company logo" width={500} />
-            <p>We build web and mobile apps from the ground.<br/>
-            We listen to your problem or idea and solve it with code.<br/><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
             <Link href={'/contact'}>Hit us up</Link> to collaborate.</p>
         </div>
     )
