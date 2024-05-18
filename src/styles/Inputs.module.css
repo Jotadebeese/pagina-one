@@ -3,39 +3,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    font-size: var(--font-size-sm);
     gap: var(--spacing-xs);
-    color: var(--dark-gray);
+    color: var(--dark-2);
     animation: leftToRight 0.5s ease-in-out;
-    max-width: 350px;
     margin: auto;
     width: 100%;
 }
 .inputContainer label {
-    padding-left: var(--spacing-sm);
+    padding-left: var(--spacing-xxs);
     text-align: left;
     width: 100%;
 }
-.inputContainer small {
-    font-size: var(--font-size-sm);
-    color: var(--dark-gray);
-    width: 100%;
-    text-align: right;
-}
-.inputContainer input {
-    padding: var(--spacing-sm);
-    font-family: inherit;
-    font-size: var(--font-size-sm);
-    border: var(--border-xs) solid var(--gray-two);
-    background: var(--light-gray);
+.inputContainer input, .inputContainer textarea {
+    padding: var(--spacing-xs);
+    border: var(--border-xs) dashed var(--light-2);
     outline: none;
     transition: 0.3s ease-in-out;
-    color: var(--dark-gray);
     width: 100%;
+    resize: vertical;
 }
-.inputContainer input:focus {
-    border: var(--border-xs) solid var(--gray-one);
-    background-color: var(--white);
+.inputContainer input:focus, .inputContainer textarea:focus {
+    border: var(--border-xs) dashed var(--primary);
     transition: 0.3s ease-in-out;
 }
 .varSpan {
@@ -94,9 +82,8 @@
       opacity: var(--bg-opacity);
     }
   }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .inputContainer {
-        font-size: var(--font-size-sm);
         row-gap: var(--spacing-xs);
     }
     .varSpan {

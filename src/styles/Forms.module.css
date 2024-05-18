@@ -1,0 +1,15 @@
+.main {
+    width: 100%;
+    max-width: 700px;
+}
+.formContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xs);
+    width: 100%;
+    padding: var(--spacing-sm);
+    background: var(--light);
+    border: var(--border-xs) dashed var(--light-2);
+    align-items: center;
+    justify-content: center;
+}

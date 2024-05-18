@@ -7,9 +7,13 @@
     justify-content: center;
     gap: var(--spacing-xxxl);
 }
+.main img {
+    animation: drop 0.8s ease-in-out;
+}
 .main p {
     font-size: 1.5rem;
     max-width: 700px;
+    animation: leftToRight 0.5s ease-in-out;
 }
 .main a {
     font-weight: var(--font-weight-semi-bold);
@@ -27,5 +31,23 @@
     .main img {
         width: 300px;
         height: fit-content;
+    }
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }

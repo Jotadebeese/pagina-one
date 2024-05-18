@@ -6,13 +6,14 @@ const invalidInputStyle = {
     border: '1px solid #F18397',
 }
 export function Input(
-    {label, smallLabel, type, name, handleChange, placeholder, style, varSpan, error, formData, required = true, min, max}:
+    {label, smallLabel, type, name, handleChange, handleTextAreaChange, placeholder, style, varSpan, error, formData, required = true, min, max}:
     {
-        label: string,
+        label?: string,
         smallLabel?: string,
         type: string,
         name: string,
         handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+        handleTextAreaChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void,
         placeholder?: string,
         style?: React.CSSProperties,
         varSpan?: boolean
@@ -32,18 +33,29 @@ export function Input(
             style={style}
         >
             <label htmlFor={name}>{label}</label>
-            <input 
-                type={type} 
-                name={name}
-                value={formData?.[name as keyof typeof formData] || ''}
-                onChange={handleChange}
-                placeholder={placeholder}
-                id={name}
-                style={error?.[name as keyof typeof error] ? invalidInputStyle : {}}
-                required={required}
-                min={min}
-                max={max}
-            />
+            {type === 'textArea' ? 
+                <textarea 
+                    name={name}
+                    value={formData?.[name as keyof typeof formData] || ''}
+                    onChange={handleTextAreaChange}
+                    placeholder={placeholder}
+                    id={name}
+                    style={error?.[name as keyof typeof error] ? invalidInputStyle : {}}
+                    required={required}
+                /> :
+                <input 
+                    type={type} 
+                    name={name}
+                    value={formData?.[name as keyof typeof formData] || ''}
+                    onChange={handleChange}
+                    placeholder={placeholder}
+                    id={name}
+                    style={error?.[name as keyof typeof error] ? invalidInputStyle : {}}
+                    required={required}
+                    min={min}
+                    max={max}
+                />
+            }
             {smallLabel && <small>{smallLabel}</small>}
         </div>
     )

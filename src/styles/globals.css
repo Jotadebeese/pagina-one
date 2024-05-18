@@ -95,12 +95,15 @@ a {
   font-family: inherit;
   text-decoration: none;
 }
-input {
+input, textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
 }
-
+input::placeholder, textarea::placeholder {
+  color: var(--dark-2);
+  opacity: 0.5;
+}
 button {
   font-family: inherit;
   font-size: inherit;
