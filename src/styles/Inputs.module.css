@@ -1,0 +1,119 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: var(--font-size-sm);
+    gap: var(--spacing-xs);
+    color: var(--dark-gray);
+    animation: leftToRight 0.5s ease-in-out;
+    max-width: 350px;
+    margin: auto;
+    width: 100%;
+}
+.inputContainer label {
+    padding-left: var(--spacing-sm);
+    text-align: left;
+    width: 100%;
+}
+.inputContainer small {
+    font-size: var(--font-size-sm);
+    color: var(--dark-gray);
+    width: 100%;
+    text-align: right;
+}
+.inputContainer input {
+    padding: var(--spacing-sm);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    border: var(--border-xs) solid var(--gray-two);
+    background: var(--light-gray);
+    outline: none;
+    transition: 0.3s ease-in-out;
+    color: var(--dark-gray);
+    width: 100%;
+}
+.inputContainer input:focus {
+    border: var(--border-xs) solid var(--gray-one);
+    background-color: var(--white);
+    transition: 0.3s ease-in-out;
+}
+.varSpan {
+    grid-column: span 1;
+}
+.radioContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+.radioOption input[type="radio"] {
+    display: none;
+}
+.radioOption label {
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+}
+.radioOption input[type="radio"] + label {
+    display: inline-block;
+    border: var(--border-sm) solid var(--light-gray);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-xs);
+    min-width: 130px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+.radioOption input[type="radio"]:hover + label {
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+.radioOption input[type="radio"]:checked + label {
+    background: var(--dark-red);
+    color: var(--cream);
+    transition: 0.3s ease-in-out;
+}
+.switchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    width: 100%;
+    padding: var(--spacing-lg) 0;
+}
+.switchContainer button {
+    width: 150px;
+    font-size: var(--font-size-sm);
+}
+.switchError button {
+    border: var(--border-xs) solid var(--red-pink);
+}
+@media (hover: none) {
+    .radioOption input[type="radio"]:hover + label{
+      opacity: var(--bg-opacity);
+    }
+  }
+@media (max-width: 800px) {
+    .inputContainer {
+        font-size: var(--font-size-sm);
+        row-gap: var(--spacing-xs);
+    }
+    .varSpan {
+        grid-column: span 2;
+    }
+    .inputContainer {
+        max-width: 100%;
+    }
+    .inputContainer small {
+        font-size: var(--font-size-xs);
+    }
+}
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

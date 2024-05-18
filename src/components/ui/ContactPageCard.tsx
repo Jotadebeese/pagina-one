@@ -1,0 +1,14 @@
+import styles from '@/src/styles/PageCards.module.css'
+import contact from '@/src/images/contact.svg'
+import Image from 'next/image'
+import { BasicForm } from './Forms'
+import { Input } from './inputs'
+
+export default function ContactPageCard() {
+    return (
+        <div className={styles.main}>
+            <Image src={contact} alt="Contact" width={500} />
+            <p>To contact us fill the form below and one of our many staff &#40;only two&#41; will be in touch.</p>
+        </div>
+    )
+}
