@@ -1,9 +1,11 @@
 .button {
-    background: var(--red-base-low-opacity);
-    border: var(--border-xs) solid var(--red-base);
-    color: var(--red-base);
-    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--light);
+    border: var(--border-xs) dashed var(--light-2);
+    color: var(--dark-2);
+    padding: var(--spacing-xs) var(--spacing-lg);
     animation: drop 0.4s ease-in-out;
+    font-weight: var(--font-weight-bold);
+    transition: ease-in-out 0.3s;
 }
 .backButton {
     background: none;
@@ -11,12 +13,12 @@
     color: var(--dark-gray);
 }
 .button:hover {
-    opacity: 0.8;
+    border-color: var(--dark-2);
     transition: ease-in-out 0.3s;
 }
 @media (hover: none) {
     .button:hover {
-        opacity: 1;
+        border-color: var(--light-2);
     }
 }
 @keyframes drop {

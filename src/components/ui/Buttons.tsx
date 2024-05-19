@@ -91,8 +91,19 @@ export function FormNext(
         </button>
     )
 }
-export function FormSubmit() {
+export function FormSubmit(
+    {style}:
+    {
+        style?: React.CSSProperties,
+    }
+) {
     return (
-        <button type='submit' className={styles.button}>Enviar</button>
+        <button 
+            type='submit' 
+            className={styles.button}
+            style={style}
+        >
+            Enviar
+        </button>
     )
 }

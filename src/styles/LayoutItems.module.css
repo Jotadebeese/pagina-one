@@ -6,9 +6,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     animation: up 0.8s ease-in-out;
+    min-height: 200px;
 }
 .circleOne {
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 200px;
     top: 50px;
@@ -19,7 +20,7 @@
     animation: rightToLeft 0.8s ease-in-out;
 }
 .circleTwoOutside {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,9 +34,10 @@
     border: var(--border-xl) solid var(--dark-2);
     background: rgba(0, 0, 0, 0);
     animation: rightToLeft 0.8s ease-in-out;
+    z-index: -1;
 }
 .circleTwoInside {
-    position: absolute;
+    position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -43,7 +45,7 @@
     background: var(--secondary);
 }
 .backTwo {
-    position: absolute;
+    position: fixed;
     width: 35%;
     height: 30%;
     top: 0;
@@ -55,7 +57,7 @@
     animation: rightToLeft 0.8s ease-in-out;
 }
 .backThree {
-    position: absolute;
+    position: fixed;
     width: 25%;
     height: 30%;
     top: 20%;
@@ -68,13 +70,12 @@
     animation: rightToLeft 0.8s ease-in-out;
 }
 .backFour {
-    position: absolute;
+    position: fixed;
     width: 35%;
     height: 60%;
     bottom: 0;
     right: 0;
     border-left: var(--border-xs) dashed var(--light-2);
-    border-bottom: var(--border-xs) dashed var(--light-2);
     border-top: var(--border-xs) dashed var(--light-2);
     background: var(--gradThree);
     z-index: -1;

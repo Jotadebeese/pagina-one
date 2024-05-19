@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Input } from "./Inputs"
 import styles from '@/src/styles/Forms.module.css'
+import { FormSubmit } from "./Buttons"
 
 const invalidInputStyle = {
     border: '1px solid #F18397',
@@ -118,6 +119,9 @@ export function BasicForm(
                         />
                     )
                 })}
+                <FormSubmit 
+                    style={{ marginLeft: 'auto', gridColumn: 'span 2' }}
+                />
             </form>
         </div>
     )
