@@ -7,7 +7,7 @@ export default function ContactPageCard() {
     return (
         <div className={styles.main}>
             <Image src={contact} alt="Contact" width={500} />
-            <p>To contact us fill the form below and one of our many staff &#40;only two&#41; will be in touch.</p>
+            <p>Fill the form below and one of our many staff &#40;only two&#41; will be in touch.</p>
             <BasicForm 
                 inputFields={{
                     name: {

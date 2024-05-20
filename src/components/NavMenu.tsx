@@ -16,7 +16,7 @@ export default function NavMenu() {
                     </Link>
                 </li>
                 <li>
-                    <Link href={'/#about'}>
+                    <Link href={'/contact'}>
                         CONTACT
                     </Link>
                 </li>

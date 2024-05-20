@@ -92,9 +92,10 @@ export function FormNext(
     )
 }
 export function FormSubmit(
-    {style}:
+    {style, title}:
     {
         style?: React.CSSProperties,
+        title: string,
     }
 ) {
     return (
@@ -103,7 +104,7 @@ export function FormSubmit(
             className={styles.button}
             style={style}
         >
-            Enviar
+            {title}
         </button>
     )
 }

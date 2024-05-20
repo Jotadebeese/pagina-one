@@ -74,6 +74,7 @@ export function BasicForm(
                 formErrors[name] = error;
             }
         });
+        console.log('Form errors:', formErrors);
         setErrors(formErrors);
         return Object.keys(formErrors).length === 0;
     }
@@ -96,10 +97,17 @@ export function BasicForm(
         const colombiaPhoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
         return colombiaPhoneRegex.test(phoneNumber);
     };
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formIsValid = validateForm();
+        if (formIsValid) {
+            console.log('Form data:', formData);
+        }
+    }
     return (
         <div className={styles.main}>
             {title && (<h2>{title}</h2>)}
-            <form className={styles.formContainer}>
+            <form onSubmit={handleSubmit}  className={styles.formContainer}>
                 {Object.keys(inputFields).map((name) => {
                     const { type, required, label, placeholder, smallLabel, style } = inputFields[name];
                     return (
@@ -121,6 +129,7 @@ export function BasicForm(
                 })}
                 <FormSubmit 
                     style={{ marginLeft: 'auto', gridColumn: 'span 2' }}
+                    title='Submit'
                 />
             </form>
         </div>

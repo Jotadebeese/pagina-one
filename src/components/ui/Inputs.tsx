@@ -50,7 +50,7 @@ export function Input(
                     onChange={handleChange}
                     placeholder={placeholder}
                     id={name}
-                    style={error?.[name as keyof typeof error] ? invalidInputStyle : {}}
+                    style={error ? invalidInputStyle : {}}
                     required={required}
                     min={min}
                     max={max}
