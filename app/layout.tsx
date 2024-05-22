@@ -13,8 +13,8 @@ const dm_sans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'PAGINA ONE',
-  description: 'Still in development',
+  title: 'PAGINA',
+  description: 'In development',
 }
 
 export default function RootLayout({
