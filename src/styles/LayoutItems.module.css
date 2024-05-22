@@ -6,18 +6,19 @@
     background-size: cover;
     background-repeat: no-repeat;
     animation: up 0.8s ease-in-out;
-    min-height: 200px;
+    min-height: 350px;
 }
 .circleOne {
     position: fixed;
     width: 200px;
     height: 200px;
-    top: 50px;
-    right: 30%;
+    top: calc(15% - 100px);
+    right: calc(35% - 100px);
     border-radius: 50%;
     border: var(--border-xs) dashed var(--light-2);
     z-index: -1;
     animation: rightToLeft 0.8s ease-in-out;
+    opacity: var(--opacity-bg);
 }
 .circleTwoOutside {
     position: fixed;
@@ -35,6 +36,7 @@
     background: rgba(0, 0, 0, 0);
     animation: rightToLeft 0.8s ease-in-out;
     z-index: -1;
+    opacity: var(--opacity-bg);
 }
 .circleTwoInside {
     position: fixed;
@@ -55,6 +57,7 @@
     background: var(--gradOne);
     z-index: -2;
     animation: rightToLeft 0.8s ease-in-out;
+    opacity: var(--opacity-bg);
 }
 .backThree {
     position: fixed;
@@ -68,6 +71,7 @@
     background: var(--gradTwo);
     z-index: -1;
     animation: rightToLeft 0.8s ease-in-out;
+    opacity: var(--opacity-bg);
 }
 .backFour {
     position: fixed;
@@ -77,8 +81,22 @@
     right: 0;
     border-left: var(--border-xs) dashed var(--light-2);
     border-top: var(--border-xs) dashed var(--light-2);
+    border-bottom: var(--border-xs) dashed var(--light-2);
     background: var(--gradThree);
-    z-index: -1;
+    z-index: -2;
+    opacity: var(--opacity-bg);
+    animation: rightToLeft 0.8s ease-in-out;
+}
+.backFive {
+    position: fixed;
+    width: 65%;
+    height: 15%;
+    top: 0;
+    left: 0;
+    border-bottom: var(--border-xs) dashed var(--light-2);
+    background: var(--gradone);
+    z-index: -2;
+    opacity: var(--opacity-bg);
     animation: rightToLeft 0.8s ease-in-out;
 }
 /* Mobile */
@@ -86,13 +104,19 @@
     .circleOne {
         width: 150px;
         height: 150px;
+        right: calc(40% - 75px);
+        top: calc(10% - 75px);
+    }
+    .backFive {
+        width: 60%;
+        height: 10%
     }
     .circleTwoOutside {
         width: 30px;
         height: 30px;
         margin-top: -15px;
         margin-right: -15px;
-        right: 30px;
+        right: 30%;
         border: var(--border-md) solid var(--dark-2);
     }
     .circleTwoInside {
@@ -127,6 +151,6 @@
     }
     100% {
         transform: translateX(0);
-        opacity: 1;
+        opacity: var(--opacity-bg);
     }
 }
