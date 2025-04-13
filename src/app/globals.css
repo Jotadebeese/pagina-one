@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import "tailwindcss";
+/* @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); */
 
 :root {
   /* Sizing */
@@ -41,29 +42,29 @@
   --font-weight-extra-bold: 800;
   --font-weight-black: 900;
   /* Colors */
-  --primary: #FF9900;
-  --secondary: #FF0000;
+  --primary: #ff9900;
+  --secondary: #ff0000;
   --dark: #000000;
-  --dark-2: #150F06;
-  --light: #FFFFFF;
+  --dark-2: #150f06;
+  --light: #ffffff;
   --light-2: #bdbdbd;
   --gradOne: linear-gradient(
-      225deg, 
-      rgba(255, 230, 226, 1) 0%,
-      rgba(255, 255, 255, 0.65) 50%, 
-      rgba(216, 216, 216, 0) 100%
+    225deg,
+    rgba(255, 230, 226, 1) 0%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(216, 216, 216, 0) 100%
   );
   --gradTwo: linear-gradient(
-      315deg, 
-      rgba(255, 238, 206, 1) 0%,
-      rgba(255, 255, 255, 0.6) 50%, 
-      rgba(255, 255, 255, 0) 100%
+    315deg,
+    rgba(255, 238, 206, 1) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
   );
   --gradThree: linear-gradient(
-      135deg, 
-      rgba(217, 217, 217, 0) 0%,
-      rgba(232, 186, 186, 0.5) 80%, 
-      rgba(246, 154, 154, 1) 100%
+    135deg,
+    rgba(217, 217, 217, 0) 0%,
+    rgba(232, 186, 186, 0.5) 80%,
+    rgba(246, 154, 154, 1) 100%
   );
   --opacity-bg: 0.2;
 }
@@ -96,12 +97,14 @@ a {
   font-family: inherit;
   text-decoration: none;
 }
-input, textarea {
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
 }
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: var(--dark-2);
   opacity: 0.5;
 }

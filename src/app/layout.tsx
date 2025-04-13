@@ -1,0 +1,50 @@
+import NavMenu from "@/src/components/NavMenu";
+import "./globals.css";
+import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import Footer from "@/src/components/Footer";
+import {
+  BackTwo,
+  BackOne,
+  BackThree,
+  BackFour,
+  CircleOne,
+  CircleTwo,
+  BackFive,
+} from "@/src/components/ui/LayoutItems";
+
+const dm_sans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
+export const metadata: Metadata = {
+  title: "PAGINA",
+  description: "In development",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={dm_sans.variable}>
+      <body>
+        <NavMenu />
+        {children}
+        <Analytics />
+        <CircleOne />
+        <CircleTwo />
+        <BackOne />
+        <BackTwo />
+        <BackThree />
+        <BackFour />
+        <BackFive />
+        <Footer />
+      </body>
+    </html>
+  );
+}
