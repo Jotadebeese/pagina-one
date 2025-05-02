@@ -1,4 +1,4 @@
-import NavMenu from "@/src/components/NavMenu";
+import NavMenu from "@/src/components/Nav";
 import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";

@@ -48,6 +48,7 @@
   --dark-2: #150f06;
   --light: #ffffff;
   --light-2: #bdbdbd;
+  --gray: #666666;
   --gradOne: linear-gradient(
     225deg,
     rgba(255, 230, 226, 1) 0%,
@@ -69,10 +70,39 @@
   --opacity-bg: 0.2;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-dark: var(--dark);
+  --color-dark-2: var(--dark-2);
+  --color-light: var(--light);
+  --color-light-2: var(--light-2);
+  --color-gradOne: var(--gradOne);
+  --color-gradTwo: var(--gradTwo);
+  --color-gradThree: var(--gradThree);
+  --color-gray: var(--gray);
+  --font-sans: var(--font-dm-sans);
+  --animate-drop: drop 0.8s ease-in-out;
+  --animate-leftToRight: leftToRight 0.5s ease-in-out;
+
+  @keyframes drop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes leftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
 
 html,
@@ -92,11 +122,6 @@ body {
   min-height: 100vh;
 }
 
-a {
-  color: inherit;
-  font-family: inherit;
-  text-decoration: none;
-}
 input,
 textarea {
   font-family: inherit;
