@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pagina — Precision Contractor Time & Invoicing Engine
 
-## Getting Started
+> Built for software contractors, consultants, and independent product engineers. Zero bloat, instant keyboard logging, automated fortnightly pay cycles, and immutable PDF billing records.
 
-First, run the development server:
+---
 
+## 🏛️ Architecture & Tech Stack
+
+```
+pagina/
+├── frontend/             # Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS v4
+│   ├── src/app/
+│   │   ├── (marketing)/  # Public product landing page, architecture & value props
+│   │   └── (app)/        # Contractor dashboard, 5s time logger, invoice builder, clients
+│   └── public/           # SVGs, brand assets, icons
+│
+└── backend/              # High-performance compiled Go binary
+    ├── cmd/server/       # HTTP entrypoint (net/http standard library)
+    └── migrations/       # Normalized PostgreSQL schema migrations (ACID ledger)
+```
+
+### Core Design Philosophy
+- **No Heavy CMS for Financial Data:** Financial ledgers and billable hours demand strict ACID guarantees and immutability. Replacing heavy CMS layers with a compiled Go service and Next.js UI shell ensures sub-15ms response times and <20MB backend memory usage.
+- **Route Groups Over Monorepo Bloat:** Avoided premature workspace fragmentation by using Next.js route groups `(marketing)` and `(app)` within a single cohesive frontend app.
+- **Bespoke Craft UI:** Styled using signature brand design tokens (warm accent `#ff9900`, canvas `#eeeeee` / `#181411`, clean dashed borders, `DM Sans` + `Roboto`).
+
+---
+
+## 🚀 Quick Start
+
+### Frontend (Next.js 15)
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+cd frontend
+pnpm install
+
+# Run dev server (http://localhost:3000)
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend (Go)
+```bash
+# Run Go server (http://localhost:8080)
+cd backend
+go run ./cmd/server
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📄 License & Credits
+Designed and engineered by [Juan Diego Bedoya](https://jotadebeese.com). All rights reserved.

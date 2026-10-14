@@ -1,17 +1,13 @@
 {
-  "name": "pagina-monorepo",
-  "version": "0.0.0",
+  "name": "pagina",
+  "version": "2.0.0",
   "private": true,
+  "description": "Precision contractor time tracking & immutable invoicing engine.",
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
-  },
-  "devDependencies": {
-    "prettier": "^3.5.0",
-    "turbo": "^2.4.0",
-    "typescript": "^5.7.3"
-  },
-  "packageManager": "pnpm@11.17.0"
+    "dev:frontend": "pnpm --prefix frontend dev",
+    "build:frontend": "pnpm --prefix frontend build",
+    "start:frontend": "pnpm --prefix frontend start",
+    "dev:backend": "cd backend && go run ./cmd/server",
+    "build:backend": "cd backend && go build -o bin/server.exe ./cmd/server"
+  }
 }

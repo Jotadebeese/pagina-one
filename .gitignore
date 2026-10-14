@@ -12,6 +12,14 @@ out/
 build
 dist/
 
+# compiled binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
 # misc
 .DS_Store
 *.pem
@@ -28,9 +36,6 @@ pnpm-debug.log*
 
 # vercel
 .vercel
-
-# turbo
-.turbo
 
 # typescript
 *.tsbuildinfo

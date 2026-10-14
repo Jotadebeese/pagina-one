@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas-light: #eeeeee;
+  --color-canvas-dark: #181411;
+  --color-foreground-light: #181411;
+  --color-foreground-dark: #cecece;
+  --color-brand-accent: #ff9900;
+  --color-border-neutral: #cecece;
+  --color-paper-muted: #e6d9d1;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Roboto', sans-serif;
+}
+
+:root {
+  --background: #eeeeee;
+  --foreground: #181411;
+  --accent: #ff9900;
+  --border: #cecece;
+  --muted: #e6d9d1;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Custom dashed utility styling for signature craft look */
+.craft-border {
+  border: 1px dashed #cecece;
+}
+
+.craft-card {
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 8px;
+}
